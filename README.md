@@ -48,7 +48,9 @@ Cela signifie qu'un routeur sait de quel voisin une route a été apprise, mais 
 Un routeur ne peut pas voir au-delà de ses propres voisins.<br>
 Cet aspect du routage à vecteur de distance est parfois appelé "routage par rumeur"
 
-Les protocoles à vecteur de distance visualisent les réseaux en termes de routeurs adjacents et de nombre de sauts, ce qui se trouve également être la métrique utilisée. Le nombre de "sauts" (max de 15 pour RIP, 16 est considéré comme inaccessible et 255 pour IGMP), augmentera d'un à chaque fois que le paquet transite par un routeur.
+Les protocoles à vecteur de distance visualisent les réseaux en termes de routeurs adjacents et de nombre de sauts,<br>
+ce qui se trouve également être la métrique utilisée.<br>
+Le nombre de `sauts` (hop) (max de 15 pour RIP, 16 est considéré comme inaccessible et 255 pour IGMP), augmentera d'un à chaque fois que le paquet transite par un routeur.
 
 ![image](https://user-images.githubusercontent.com/83721477/166432197-98345227-5a67-4f00-92be-a11d84ae9927.png)
 
