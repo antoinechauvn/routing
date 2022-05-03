@@ -85,7 +85,7 @@ Cette méthodologie limite considérablement la taille du réseau sur lequel Dis
 Les informations de routage ne sont échangées qu'entre voisins directement connectés.<br>
 Cela signifie qu'un routeur sait de quel voisin une route a été apprise, mais il ne sait pas où ce voisin a appris la route<br>
 Un routeur ne peut pas voir au-delà de ses propres voisins.<br>
-Cet aspect du routage à vecteur de distance est parfois appelé "routage par rumeur"
+Cet aspect du routage à vecteur de distance est parfois appelé `routage par rumeur`
 
 Les protocoles à vecteur de distance visualisent les réseaux en termes de routeurs adjacents et de nombre de sauts,<br>
 ce qui se trouve également être la métrique utilisée.<br>
