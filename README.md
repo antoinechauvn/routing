@@ -46,6 +46,11 @@ La distance administrative est une condition de départage qui est utilisée lor
 
 La distance administrative est une valeur numérique préconfigurée de la fiabilité d'une source d'informations de routage. Les protocoles les plus préférés ont des numéros de distance administrative plus petits.
 
+
+![image](https://user-images.githubusercontent.com/83721477/166451961-d3968860-7301-4fb4-8ea4-a37399232c40.png)
+
+Sélection d'un itinéraire en fonction de la distance administrative
+
 ### Match le plus long
 
 Tous les protocoles de routage de monodiffusion recherchent des itinéraires à l'aide de l'adresse IP de destination d'un paquet.
@@ -65,6 +70,9 @@ La différence importante entre la correspondance la plus longue et les deux aut
 Les deux réseaux apparaîtront dans la table de routage.
 <br>
 Une telle situation existe souvent lorsqu'un récapitulatif est effectué dans le réseau, c'est-à-dire le processus de combinaison de plusieurs routes en une seule.
+
+![image](https://user-images.githubusercontent.com/83721477/166452014-de5cca83-37fc-468d-9889-5d0172e43263.png)
+Sélection du meilleur itinéraire en fonction de la correspondance la plus longue
 
 
 ## Protocoles de routage à vecteur de distance
