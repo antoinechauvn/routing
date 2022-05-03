@@ -37,30 +37,6 @@ En fonction du nombre de destinataires et de la manière de délivrer le message
 <img src="https://user-images.githubusercontent.com/83721477/166416623-5fb5ecf0-5133-4d81-b33c-5571cab39155.png" width=50% height=50%>
 
 
-## Protocoles de routage à état de lien
-Le routage à état de liens, nécessite que tous les routeurs connaissent les chemins accessibles par tous les autres routeurs du réseau. Les informations d'état des liens sont inondées dans tout le domaine d'état des liens (une zone dans OSPF ou IS-IS) pour garantir que tous les routeurs possèdent une copie synchronisée de la base de données d'état des liens de la zone. À partir de cette base de données commune, chaque routeur construit sa propre arborescence relative des plus courts chemins, avec lui-même comme racine, pour toutes les routes connues.
-
-### OSPF
-OSPF est un protocole de routage sans classe , ce qui signifie que dans ses mises à jour, il inclut le sous-réseau de chaque route qu'il connaît, activant ainsi des masques de sous-réseau de longueur variable. Avec des masques de sous-réseau de longueur variable, un réseau IP peut être divisé en plusieurs sous-réseaux de différentes tailles. Cela offre aux administrateurs réseau une flexibilité de configuration réseau supplémentaire. Ces mises à jour sont multidiffusées à des adresses spécifiques (224.0.0.5 et 224.0.0.6).
-
-Voici une liste des paquets OSPF les plus fréquemment utilisés :
-
-* **Link State Advertisement** (LSA) : Le principal moyen de communication entre les routeurs OSPF, c'est le paquet qui transporte toutes les informations fondamentales sur la topologie et qui est inondé entre les zones pour effectuer différentes fonctions, il existe 11 types de paquets LSA.
-
-* **Link State DataBase** (LSDB) : le paquet LSDB contient toutes les informations mises à jour sur l'état des liens échangées sur le réseau, et tous les routeurs d'une même zone ont une LSDB identique , et lorsque deux routeurs forment une nouvelle contiguïté voisine, ils synchronisent leur LSDB pour être entièrement adjacents .
-
-* **Requête d'état de liaison** (LSR) : une fois que la contiguïté du voisin est formée et que la LSDB est échangée, les routeurs voisins peuvent localiser une information LSDB manquante, ils envoient ensuite un paquet de demande pour réclamer la pièce manquante, les voisins reçoivent ce paquet et répondent avec LSU .
-
-* **Link State Update** (LSU) : Un paquet de réponse envoie une information spécifique LSDB demandée par un voisin OSPF via un paquet LSR .
-
-* **Accusé de réception d'état de liaison** (LSAcK) : le routeur qui envoie le paquet LSR confirme la réception du LSU du voisin en envoyant un paquet de confirmation accusant réception des LSU demandés .
-
-
-https://www.youtube.com/watch?v=sDnIRhiolp8
-
-Exemple:<br>
-![image](https://user-images.githubusercontent.com/83721477/166420552-750dc45a-0760-414e-a6b4-366caafe90e7.png)
-
 ## Protocoles de routage à vecteur de distance
 Les protocoles de routage à vecteur de distance utilisent des diffusions fréquentes (255.255.255.255 ou FF:FF:FF:FF) de l'intégralité de leur table de routage toutes les 30 secondes. sur toutes leurs interfaces afin de communiquer avec leurs voisins. Plus les tables de routage sont volumineuses, plus il y a de diffusions. Cette méthodologie limite considérablement la taille du réseau sur lequel Distance Vector peut être utilisé.
 Le routage à vecteur de distance est ainsi nommé car il implique deux facteurs : la distance , ou métrique, d'une destination,
@@ -108,5 +84,30 @@ Dans notre exemple, cela signifie que lorsque le réseau 5 tombe en panne, le ro
 L'empoisonnement de route, utilisé avec les hold-down (voir section ci-dessous) accélérera certainement le temps de convergence car les routeurs voisins n'ont pas à attendre 30 secondes avant d'annoncer la route empoisonnée.
 
 https://www.youtube.com/watch?v=40b1bM_y0Ng
+
+## Protocoles de routage à état de lien
+Le routage à état de liens, nécessite que tous les routeurs connaissent les chemins accessibles par tous les autres routeurs du réseau. Les informations d'état des liens sont inondées dans tout le domaine d'état des liens (une zone dans OSPF ou IS-IS) pour garantir que tous les routeurs possèdent une copie synchronisée de la base de données d'état des liens de la zone. À partir de cette base de données commune, chaque routeur construit sa propre arborescence relative des plus courts chemins, avec lui-même comme racine, pour toutes les routes connues.
+
+### OSPF
+OSPF est un protocole de routage sans classe , ce qui signifie que dans ses mises à jour, il inclut le sous-réseau de chaque route qu'il connaît, activant ainsi des masques de sous-réseau de longueur variable. Avec des masques de sous-réseau de longueur variable, un réseau IP peut être divisé en plusieurs sous-réseaux de différentes tailles. Cela offre aux administrateurs réseau une flexibilité de configuration réseau supplémentaire. Ces mises à jour sont multidiffusées à des adresses spécifiques (224.0.0.5 et 224.0.0.6).
+
+Voici une liste des paquets OSPF les plus fréquemment utilisés :
+
+* **Link State Advertisement** (LSA) : Le principal moyen de communication entre les routeurs OSPF, c'est le paquet qui transporte toutes les informations fondamentales sur la topologie et qui est inondé entre les zones pour effectuer différentes fonctions, il existe 11 types de paquets LSA.
+
+* **Link State DataBase** (LSDB) : le paquet LSDB contient toutes les informations mises à jour sur l'état des liens échangées sur le réseau, et tous les routeurs d'une même zone ont une LSDB identique , et lorsque deux routeurs forment une nouvelle contiguïté voisine, ils synchronisent leur LSDB pour être entièrement adjacents .
+
+* **Requête d'état de liaison** (LSR) : une fois que la contiguïté du voisin est formée et que la LSDB est échangée, les routeurs voisins peuvent localiser une information LSDB manquante, ils envoient ensuite un paquet de demande pour réclamer la pièce manquante, les voisins reçoivent ce paquet et répondent avec LSU .
+
+* **Link State Update** (LSU) : Un paquet de réponse envoie une information spécifique LSDB demandée par un voisin OSPF via un paquet LSR .
+
+* **Accusé de réception d'état de liaison** (LSAcK) : le routeur qui envoie le paquet LSR confirme la réception du LSU du voisin en envoyant un paquet de confirmation accusant réception des LSU demandés .
+
+
+https://www.youtube.com/watch?v=sDnIRhiolp8
+
+Exemple:<br>
+![image](https://user-images.githubusercontent.com/83721477/166420552-750dc45a-0760-414e-a6b4-366caafe90e7.png)
+
 
 ![image](https://user-images.githubusercontent.com/83721477/166420147-b68e6c67-2e51-4203-8b88-cd237bd951c0.png)
