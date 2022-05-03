@@ -35,16 +35,37 @@ Ce tableau répertorie les différents protocoles de routage et la métrique qu'
 ![image](https://user-images.githubusercontent.com/83721477/166449531-913ce48c-bc5e-4236-a422-c08635b6e49a.png)
 
 ![image](https://user-images.githubusercontent.com/83721477/166449098-67e1cfbf-823a-45b8-a574-278d97d20c8d.png)
+
 Sélection d'une route à l'aide de la métrique du protocole de routage
 
 ### Distance administrative!
 ![image](https://user-images.githubusercontent.com/83721477/166449323-4d1985ff-a620-4144-a94e-08508f38c548.png)
 ![image](https://user-images.githubusercontent.com/83721477/166449373-c18705e4-a767-4497-b76c-3bccba2b269d.png)
+
 La distance administrative est une condition de départage qui est utilisée lorsqu'il existe deux routes candidates ou plus de même longueur mais apprises via des protocoles de routage différents. Une seule version de ces routes vers le même réseau sera installée dans la table de routage.
 
 La distance administrative est une valeur numérique préconfigurée de la fiabilité d'une source d'informations de routage. Les protocoles les plus préférés ont des numéros de distance administrative plus petits.
 
 ### Match le plus long
+
+Tous les protocoles de routage de monodiffusion recherchent des itinéraires à l'aide de l'adresse IP de destination d'un paquet.
+<br>
+La correspondance la plus longue fait référence au processus d'identification de la route vers le réseau le plus spécifique auquel le paquet correspond.
+<br>
+Par exemple, la route par défaut ou la route vers 0.0.0.0/0 correspond à chaque paquet.
+<br>
+Le saut suivant de ces routes est souvent appelé passerelle de dernier recours car il s'agit de la route la moins préférée, qui n'est utilisée que s'il n'existe aucune autre route correspondante.
+<br>
+La route la plus spécifique est une route hôte avec une longueur de préfixe de 32 (ou un masque de sous-réseau de 255.255.255.255).
+<br>
+Par exemple, 192.168.100.25/32 est une route hôte et les paquets envoyés à cet hôte spécifique suivront toujours cette route.
+<br>
+La différence importante entre la correspondance la plus longue et les deux autres étapes est que le routeur compare deux routes différentes, l'une étant un sur-ensemble d'une autre.
+<br>
+Les deux réseaux apparaîtront dans la table de routage.
+<br>
+Une telle situation existe souvent lorsqu'un récapitulatif est effectué dans le réseau, c'est-à-dire le processus de combinaison de plusieurs routes en une seule.
+
 
 ## Protocoles de routage à vecteur de distance
 Les protocoles de routage à vecteur de distance utilisent des diffusions fréquentes (255.255.255.255 ou FF:FF:FF:FF)<br>
