@@ -24,12 +24,16 @@ expéditeur jusqu'à un ou plusieurs destinataires
 
 ## Déterminer comment un routeur prend une décision de transfert
 ### Métrique
-Les protocoles de routage dynamique calculent et utilisent une valeur numérique pour décrire le coût d'un chemin vers une destination. Ce nombre est appelé une `métrique` et il est spécifique à chaque protocole de routage.<br>
-Les valeurs métriques de deux protocoles de routage différents ne sont pas comparées entre elles.<br>
-Tous les protocoles de routage utilisent des propriétés différentes du chemin ou utilisent des calculs différents.
 
-Par exemple, certains protocoles utilisent une métrique simple comme le nombre de routeurs ou de sauts qu'un paquet doit traverser pour atteindre le réseau distant.<br>
+```
+Les protocoles de routage dynamique calculent et utilisent une valeur numérique pour décrire le coût d'un chemin vers une destination.
+Ce nombre est appelé une `métrique` et il est spécifique à chaque protocole de routage.
+Les valeurs métriques de deux protocoles de routage différents ne sont pas comparées entre elles.
+Tous les protocoles de routage utilisent des propriétés différentes du chemin ou utilisent des calculs différents.
+Par exemple, certains protocoles utilisent une métrique simple comme le nombre de routeurs ou de sauts qu'un paquet doit traverser pour
+atteindre le réseau distant
 Certains autres protocoles peuvent utiliser la bande passante comme coût de chemin.
+```
 
 Ce tableau répertorie les différents protocoles de routage et la métrique qu'ils utilisent.
 ![image](https://user-images.githubusercontent.com/83721477/166452273-d2f93ba5-9fca-412c-b45a-e1baaaa63b84.png)
@@ -37,7 +41,7 @@ Ce tableau répertorie les différents protocoles de routage et la métrique qu'
 #### Sélection d'une route à l'aide de la métrique du protocole de routage
 ![image](https://user-images.githubusercontent.com/83721477/166449098-67e1cfbf-823a-45b8-a574-278d97d20c8d.png)
 
-### Distance administrative!
+### Distance administrative
 La distance administrative est une condition de départage qui est utilisée lorsqu'il existe deux routes candidates ou plus de même longueur mais apprises via des protocoles de routage différents. Une seule version de ces routes vers le même réseau sera installée dans la table de routage.
 
 La distance administrative est une valeur numérique préconfigurée de la `fiabilité d'une source d'informations de routage`.<br>
