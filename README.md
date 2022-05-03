@@ -24,15 +24,14 @@ En fonction du nombre de destinataires et de la manière de délivrer le message
 
 
 ## Protocoles de routage à état de lien
-Et on à ceux à état de lien: qui utilise un algorithme beaucoup plus efficace. Ici, les routeurs construisent leurs tables de routage, en fonction du coût des différentes liaisons !
+Les protocoles à état de lien utilisent un algorithme beaucoup plus efficace. Ici, les routeurs construisent leurs tables de routage, en fonction du coût des différentes liaisons !
 OSPF et ISIS sont des protocoles de routage à état de lien. Ils ont l’avantage d’avoir une convergence très rapide.
-Vecteur de distance: Les routeurs permettent de choisir le chemin que les données vont emprunter pour arriver jusqu’à la destination.
 
 
-Ce sont des équipements qui ont plusieurs cartes réseau, dont chacune est reliée à un réseau différent.
 ## Protocoles de routage à vecteur de distance
 Les protocoles de routage à vecteur de distances permettent de construire des tables de routages sans aucune vision globale du réseau.
 Le terme « vecteur » vient du faite, que le protocole manipule des tableaux vers les autres nœuds du réseau.
+Ce sont des équipements qui ont plusieurs cartes réseau, dont chacune est reliée à un réseau différent.
 
 Et le mot « distance » est le nombre de sauts qui lui permet d’atteindre les autres routeurs !
 IGRP et RIP sont des protocoles de routage à vecteur de distance.
