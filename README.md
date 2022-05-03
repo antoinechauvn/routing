@@ -16,7 +16,6 @@ Les protocoles de passerelle extérieure ( EGP ) se trouvent entre les systèmes
 Les protocoles de passerelle intérieure ( IGP ) se trouvent dans les systèmes autonomes
 ![image](https://user-images.githubusercontent.com/83721477/166430025-8c92f085-9a8d-4abc-a9cf-872f8014b55e.png)
 
-
 ## Qu'est-ce qu'un protocole de routage?
 ```
 Le protocole de routage est le mécanisme par lequel des chemins sont sélectionnés dans un réseau pour acheminer les données d'un
@@ -24,6 +23,7 @@ expéditeur jusqu'à un ou plusieurs destinataires
 ```
 
 ## Déterminer comment un routeur prend une décision de transfert
+### Métrique
 Les protocoles de routage dynamique calculent et utilisent une valeur numérique pour décrire le coût d'un chemin vers une destination. Ce nombre est appelé une `métrique` et il est spécifique à chaque protocole de routage.<br>
 Les valeurs métriques de deux protocoles de routage différents ne sont pas comparées entre elles.<br>
 Tous les protocoles de routage utilisent des propriétés différentes du chemin ou utilisent des calculs différents.
@@ -32,8 +32,19 @@ Par exemple, certains protocoles utilisent une métrique simple comme le nombre 
 Certains autres protocoles peuvent utiliser la bande passante comme coût de chemin.
 
 Ce tableau répertorie les différents protocoles de routage et la métrique qu'ils utilisent.
-<img width="485" alt="image" src="https://user-images.githubusercontent.com/83721477/166447599-1c488030-6d2d-4b45-8a50-0bf4c1ae3243.png">
+![image](https://user-images.githubusercontent.com/83721477/166449531-913ce48c-bc5e-4236-a422-c08635b6e49a.png)
 
+![image](https://user-images.githubusercontent.com/83721477/166449098-67e1cfbf-823a-45b8-a574-278d97d20c8d.png)
+Sélection d'une route à l'aide de la métrique du protocole de routage
+
+### Distance administrative!
+![image](https://user-images.githubusercontent.com/83721477/166449323-4d1985ff-a620-4144-a94e-08508f38c548.png)
+![image](https://user-images.githubusercontent.com/83721477/166449373-c18705e4-a767-4497-b76c-3bccba2b269d.png)
+La distance administrative est une condition de départage qui est utilisée lorsqu'il existe deux routes candidates ou plus de même longueur mais apprises via des protocoles de routage différents. Une seule version de ces routes vers le même réseau sera installée dans la table de routage.
+
+La distance administrative est une valeur numérique préconfigurée de la fiabilité d'une source d'informations de routage. Les protocoles les plus préférés ont des numéros de distance administrative plus petits.
+
+### Match le plus long
 
 ## Protocoles de routage à vecteur de distance
 Les protocoles de routage à vecteur de distance utilisent des diffusions fréquentes (255.255.255.255 ou FF:FF:FF:FF)<br>
