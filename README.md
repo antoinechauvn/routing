@@ -38,13 +38,12 @@ Ce tableau répertorie les différents protocoles de routage et la métrique qu'
 ![image](https://user-images.githubusercontent.com/83721477/166449098-67e1cfbf-823a-45b8-a574-278d97d20c8d.png)
 
 ### Distance administrative!
-![image](https://user-images.githubusercontent.com/83721477/166449323-4d1985ff-a620-4144-a94e-08508f38c548.png)
-![image](https://user-images.githubusercontent.com/83721477/166449373-c18705e4-a767-4497-b76c-3bccba2b269d.png)
-
 La distance administrative est une condition de départage qui est utilisée lorsqu'il existe deux routes candidates ou plus de même longueur mais apprises via des protocoles de routage différents. Une seule version de ces routes vers le même réseau sera installée dans la table de routage.
 
 La distance administrative est une valeur numérique préconfigurée de la fiabilité d'une source d'informations de routage. Les protocoles les plus préférés ont des numéros de distance administrative plus petits.
-
+#### Distances administratives par défaut
+![image](https://user-images.githubusercontent.com/83721477/166452673-a0ae8900-a7ec-4dd0-a2f4-3b3e86f1d7e6.png)
+![image](https://user-images.githubusercontent.com/83721477/166452736-82c79f37-4c45-43bf-8133-a2dca30c1952.png)
 
 ![image](https://user-images.githubusercontent.com/83721477/166451961-d3968860-7301-4fb4-8ea4-a37399232c40.png)
 
