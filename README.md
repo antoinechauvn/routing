@@ -131,7 +131,13 @@ L'empoisonnement de route, utilisé avec les hold-down (voir section ci-dessous)
 https://www.youtube.com/watch?v=40b1bM_y0Ng
 
 ## Protocoles de routage à état de lien
-Le routage à état de liens, nécessite que tous les routeurs connaissent les chemins accessibles par tous les autres routeurs du réseau. Les informations d'état des liens sont inondées dans tout le domaine d'état des liens (une zone dans OSPF ou IS-IS) pour garantir que tous les routeurs possèdent une copie synchronisée de la base de données d'état des liens de la zone. À partir de cette base de données commune, chaque routeur construit sa propre arborescence relative des plus courts chemins, avec lui-même comme racine, pour toutes les routes connues.
+```
+Le routage à état de liens, nécessite que tous les routeurs connaissent les chemins accessibles par tous les autres
+routeurs du réseau. Les informations d'état des liens sont inondées dans tout le domaine d'état des liens
+(une zone dans OSPF ou IS-IS) pour garantir que tous les routeurs possèdent une copie synchronisée de la base de
+données d'état des liens de la zone. À partir de cette base de données commune, chaque routeur construit sa propre
+arborescence relative des plus courts chemins, avec lui-même comme racine, pour toutes les routes connues.
+```
 
 ### OSPF
 OSPF est un protocole de routage sans classe , ce qui signifie que dans ses mises à jour, il inclut le sous-réseau de chaque route qu'il connaît, activant ainsi des masques de sous-réseau de longueur variable. Avec des masques de sous-réseau de longueur variable, un réseau IP peut être divisé en plusieurs sous-réseaux de différentes tailles. Cela offre aux administrateurs réseau une flexibilité de configuration réseau supplémentaire. Ces mises à jour sont multidiffusées à des adresses spécifiques (224.0.0.5 et 224.0.0.6).
