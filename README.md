@@ -32,7 +32,7 @@ Par exemple, certains protocoles utilisent une métrique simple comme le nombre 
 Certains autres protocoles peuvent utiliser la bande passante comme coût de chemin.
 
 Ce tableau répertorie les différents protocoles de routage et la métrique qu'ils utilisent.
-![image](https://user-images.githubusercontent.com/83721477/166449531-913ce48c-bc5e-4236-a422-c08635b6e49a.png)
+![image](https://user-images.githubusercontent.com/83721477/166452273-d2f93ba5-9fca-412c-b45a-e1baaaa63b84.png)
 
 ![image](https://user-images.githubusercontent.com/83721477/166449098-67e1cfbf-823a-45b8-a574-278d97d20c8d.png)
 
