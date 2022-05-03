@@ -23,20 +23,6 @@ Le protocole de routage est le mécanisme par lequel des chemins sont sélection
 expéditeur jusqu'à un ou plusieurs destinataires
 ```
 
-En fonction du nombre de destinataires et de la manière de délivrer le message, on distingue :
-* unicast, qui consiste à acheminer les données vers une seule destination déterminée,
-<img src="https://user-images.githubusercontent.com/83721477/166416539-81c06acf-455c-47b8-bd61-a9e780bda4a4.png" width=50% height=50%>
-
-* broadcast qui consiste à diffuser les données à toutes les machines,
-<img src="https://user-images.githubusercontent.com/83721477/166416582-137d9fe4-06b2-41f1-aef3-fed3393888e6.png" width=50% height=50%>
-
-* multicast qui consiste à délivrer le message à l'ensemble des machines manifestant un intérêt pour un groupe,
-<img src="https://user-images.githubusercontent.com/83721477/166416598-75fde3bb-4154-4d97-8a44-2028dc07c8a5.png" width=50% height=50%>
-
-* anycast qui consiste à délivrer les données à n'importe quel membre d'un groupe, mais généralement le plus proche, au sein du réseau.
-<img src="https://user-images.githubusercontent.com/83721477/166416623-5fb5ecf0-5133-4d81-b33c-5571cab39155.png" width=50% height=50%>
-
-
 ## Protocoles de routage à vecteur de distance
 Les protocoles de routage à vecteur de distance utilisent des diffusions fréquentes (255.255.255.255 ou FF:FF:FF:FF)<br>
 de l'intégralité de leur table de routage toutes les 30 secondes. sur toutes leurs interfaces afin de communiquer avec leurs voisins.<br>
