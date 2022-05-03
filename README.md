@@ -54,9 +54,9 @@ Les protocoles les plus préférés ont des numéros de distance administrative 
 ### Match le plus long
 
 La correspondance la plus longue fait référence au processus d'identification de la route vers le réseau le plus spécifique auquel le paquet correspond.
-<br>
+<br><br>
 **La route la plus spécifique est une route hôte avec une longueur de préfixe de 32 (ou un masque de sous-réseau de 255.255.255.255).**
-<br>
+<br><br>
 Par exemple, 192.168.100.25/32 est une route hôte et les paquets envoyés à cet hôte spécifique suivront toujours cette route.
 <br>
 La différence importante entre la correspondance la plus longue et les deux autres étapes est que le routeur compare deux routes différentes, l'une étant un sur-ensemble d'une autre.
@@ -70,17 +70,19 @@ Une telle situation existe souvent lorsqu'un récapitulatif est effectué dans l
 
 
 ## Protocoles de routage à vecteur de distance
-Les protocoles de routage à vecteur de distance utilisent des diffusions fréquentes (255.255.255.255 ou FF:FF:FF:FF)<br>
-de l'intégralité de leur table de routage toutes les 30 secondes. sur toutes leurs interfaces afin de communiquer avec leurs voisins.<br>
-Plus les tables de routage sont volumineuses, plus il y a de diffusions.<br>
-Cette méthodologie limite considérablement la taille du réseau sur lequel Distance Vector peut être utilisé.<br><br>
+```
+Les protocoles de routage à vecteur de distance utilisent des diffusions fréquentes (255.255.255.255 ou FF:FF:FF:FF)
+de l'intégralité de leur table de routage toutes les 30 secondes. sur toutes leurs interfaces afin de communiquer avec leurs voisins.
+Plus les tables de routage sont volumineuses, plus il y a de diffusions.
+Cette méthodologie limite considérablement la taille du réseau sur lequel Distance Vector peut être utilisé.
+```
 
 #### Le routage à vecteur de distance est ainsi nommé car il implique deux facteurs : la distance et le vecteur<br><br>
 
-Les informations de routage ne sont échangées qu'entre voisins directement connectés.<br>
-Cela signifie qu'un routeur sait de quel voisin une route a été apprise, mais il ne sait pas où ce voisin a appris la route<br>
-Un routeur ne peut pas voir au-delà de ses propres voisins.<br>
-Cet aspect du routage à vecteur de distance est parfois appelé `routage par rumeur`
+* Les informations de routage ne sont échangées qu'entre voisins directement connectés.
+* Cela signifie qu'un routeur sait de quel voisin une route a été apprise, mais il ne sait pas où ce voisin a appris la route
+* Un routeur ne peut pas voir au-delà de ses propres voisins.
+* Cet aspect du routage à vecteur de distance est parfois appelé `routage par rumeur`
 
 Les protocoles à vecteur de distance visualisent les réseaux en termes de routeurs adjacents et de nombre de sauts,<br>
 ce qui se trouve également être la métrique utilisée.<br>
