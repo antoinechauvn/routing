@@ -23,6 +23,14 @@ Le protocole de routage est le mécanisme par lequel des chemins sont sélection
 expéditeur jusqu'à un ou plusieurs destinataires
 ```
 
+## Déterminer comment un routeur prend une décision de transfert
+Les protocoles de routage dynamique calculent et utilisent une valeur numérique pour décrire le coût d'un chemin vers une destination. Ce nombre est appelé une `métrique` et il est spécifique à chaque protocole de routage.<br>
+Les valeurs métriques de deux protocoles de routage différents ne sont pas comparées entre elles.<br>
+Tous les protocoles de routage utilisent des propriétés différentes du chemin ou utilisent des calculs différents.
+
+Par exemple, certains protocoles utilisent une métrique simple comme le nombre de routeurs ou de sauts qu'un paquet doit traverser pour atteindre le réseau distant.<br>
+Si deux pairs annoncent des routes vers un tel réseau, celui qui a le plus petit nombre de sauts est choisi. Certains autres protocoles peuvent utiliser la bande passante comme coût de chemin.
+
 ## Protocoles de routage à vecteur de distance
 Les protocoles de routage à vecteur de distance utilisent des diffusions fréquentes (255.255.255.255 ou FF:FF:FF:FF)<br>
 de l'intégralité de leur table de routage toutes les 30 secondes. sur toutes leurs interfaces afin de communiquer avec leurs voisins.<br>
