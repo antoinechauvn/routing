@@ -31,6 +31,10 @@ Tous les protocoles de routage utilisent des propriétés différentes du chemin
 Par exemple, certains protocoles utilisent une métrique simple comme le nombre de routeurs ou de sauts qu'un paquet doit traverser pour atteindre le réseau distant.<br>
 Certains autres protocoles peuvent utiliser la bande passante comme coût de chemin.
 
+Ce tableau répertorie les différents protocoles de routage et la métrique qu'ils utilisent.
+<img width="485" alt="image" src="https://user-images.githubusercontent.com/83721477/166447599-1c488030-6d2d-4b45-8a50-0bf4c1ae3243.png">
+
+
 ## Protocoles de routage à vecteur de distance
 Les protocoles de routage à vecteur de distance utilisent des diffusions fréquentes (255.255.255.255 ou FF:FF:FF:FF)<br>
 de l'intégralité de leur table de routage toutes les 30 secondes. sur toutes leurs interfaces afin de communiquer avec leurs voisins.<br>
