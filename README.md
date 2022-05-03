@@ -47,9 +47,8 @@ Les protocoles les plus préférés ont des numéros de distance administrative 
 ![image](https://user-images.githubusercontent.com/83721477/166452673-a0ae8900-a7ec-4dd0-a2f4-3b3e86f1d7e6.png)
 ![image](https://user-images.githubusercontent.com/83721477/166452736-82c79f37-4c45-43bf-8133-a2dca30c1952.png)
 
+#### Sélection d'un itinéraire en fonction de la distance administrative
 ![image](https://user-images.githubusercontent.com/83721477/166451961-d3968860-7301-4fb4-8ea4-a37399232c40.png)
-
-Sélection d'un itinéraire en fonction de la distance administrative
 
 ### Match le plus long
 
