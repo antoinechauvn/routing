@@ -60,7 +60,7 @@ Par exemple, la route par défaut ou la route vers 0.0.0.0/0 correspond à chaqu
 <br>
 Le saut suivant de ces routes est souvent appelé passerelle de dernier recours car il s'agit de la route la moins préférée, qui n'est utilisée que s'il n'existe aucune autre route correspondante.
 <br>
-La route la plus spécifique est une route hôte avec une longueur de préfixe de 32 (ou un masque de sous-réseau de 255.255.255.255).
+**La route la plus spécifique est une route hôte avec une longueur de préfixe de 32 (ou un masque de sous-réseau de 255.255.255.255).**
 <br>
 Par exemple, 192.168.100.25/32 est une route hôte et les paquets envoyés à cet hôte spécifique suivront toujours cette route.
 <br>
