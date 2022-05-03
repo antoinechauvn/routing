@@ -5,7 +5,7 @@
 
 `Route par défaut` : Lorsqu'il n'y a pas de route pour un réseau dans la table de routage, le traffic est acheminer via la route par défaut. En l'absence de route par défaut, le routeur éliminera un paquet dont la destination n'est pas connue.
 
-`Route statique` : une route permanente entrée manuellement dans une table de routage. Cette route restera dans le tableau, même si le lien tombe en panne. Il ne peut être effacé que manuellement.
+`Route statique` : Une route statique est une route configurer manuellement dans la table de routage. Cette route restera dans le tableau.
 
 `Route dynamique` : une entrée de route qui est mise à jour dynamiquement (automatiquement) à mesure que des modifications se produisent sur le réseau. Les routes dynamiques sont fondamentalement l'opposé des routes statiques.
 
