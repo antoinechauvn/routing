@@ -68,9 +68,11 @@ L'un des problèmes avec RIP est qu'il a un temps de convergence lent.
 
 Expliquons le schéma ci-dessus :
 
-Dans l'image ci-dessus, le réseau est dit `convergé`, c'est-à-dire que tous les routeurs du réseau ont rempli leur table de routage et sont parfaitement au courant des réseaux qu'ils peuvent contacter. Puisque le réseau est maintenant convergé, les ordinateurs de n'importe lequel des réseaux ci-dessus peuvent entrer en contact les uns avec les autres.
+* Dans l'image ci-dessus, le réseau est dit `convergé`, c'est-à-dire que tous les routeurs du réseau ont rempli leur table de routage et sont parfaitement au courant des réseaux qu'ils peuvent contacter.
+* Puisque le réseau est maintenant convergé, les ordinateurs de n'importe lequel des réseaux ci-dessus peuvent entrer en contact les uns avec les autres.
+* Encore une fois, en regardant l'une des tables de routage, vous remarquez l'adresse réseau avec l'interface de sortie sur la droite et à côté se trouve le nombre de sauts vers ce réseau. 
 
-Encore une fois, en regardant l'une des tables de routage, vous remarquerez l'adresse réseau avec l'interface de sortie sur la droite et à côté se trouve le nombre de sauts vers ce réseau. N'oubliez pas que RIP ne comptera que jusqu'à 15 sauts, après quoi le paquet est rejeté (sur le saut 16).
+**N'oubliez pas que RIP ne comptera que jusqu'à 15 sauts, après quoi le paquet est rejeté (sur le saut 16).**
 
 Chaque routeur diffusera l'intégralité de sa table de routage toutes les 30 secondes.
 
