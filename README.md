@@ -62,16 +62,50 @@ Exemple:<br>
 ![image](https://user-images.githubusercontent.com/83721477/166420552-750dc45a-0760-414e-a6b4-366caafe90e7.png)
 
 ## Protocoles de routage à vecteur de distance
-**Routing by Rumor**
-```
+Les protocoles de routage à vecteur de distance utilisent des diffusions fréquentes (255.255.255.255 ou FF:FF:FF:FF) de l'intégralité de leur table de routage toutes les 30 secondes. sur toutes leurs interfaces afin de communiquer avec leurs voisins. Plus les tables de routage sont volumineuses, plus il y a de diffusions. Cette méthodologie limite considérablement la taille du réseau sur lequel Distance Vector peut être utilisé.
 Le routage à vecteur de distance est ainsi nommé car il implique deux facteurs : la distance , ou métrique, d'une destination,
 et le vecteur , ou direction à prendre pour s'y rendre. Les informations de routage ne sont échangées qu'entre voisins
 directement connectés. Cela signifie qu'un routeur sait de quel voisin une route a été apprise, mais il ne sait pas où ce voisin
 a appris la route ; un routeur ne peut pas voir au-delà de ses propres voisins. Cet aspect du routage à vecteur de distance est
-parfois appelé "routage par rumeur". Des mesures telles que l'horizon partagé et l'inversion du poison sont utilisées pour éviter
-les boucles de routage.
+parfois appelé "routage par rumeur"
 
-```
+Les protocoles à vecteur de distance visualisent les réseaux en termes de routeurs adjacents et de nombre de sauts, ce qui se trouve également être la métrique utilisée. Le nombre de "sauts" (max de 15 pour RIP, 16 est considéré comme inaccessible et 255 pour IGMP), augmentera d'un à chaque fois que le paquet transite par un routeur.
+
+![image](https://user-images.githubusercontent.com/83721477/166432197-98345227-5a67-4f00-92be-a11d84ae9927.png)
+
+En regardant à nouveau la table de routage pour le routeur B , les nombres que vous voyez sur le côté droit des interfaces sont les "nombres de sauts" qui, comme mentionné, est la métrique que les protocoles de vecteur de distance utilisent pour suivre à quelle distance un particulier réseau est. Puisque ces 2 réseaux sont connectés directement à l'interface du routeur, ils auront une valeur de zéro (0) dans l'entrée de la table du routeur. La même règle s'applique à chaque routeur de notre exemple.
+
+Rappelez-vous que nous avons "juste allumer les routeurs", donc le réseau converge maintenant et cela signifie qu'aucune donnée n'est transmise. Quand je dis "pas de données", je veux dire les données de n'importe quel ordinateur ou serveur qui pourrait être sur l'un des réseaux. Pendant ce temps de "convergence", le seul type de données transmis entre les routeurs est celui qui leur permet de remplir leurs tables de routage et après cela, les routeurs transmettront tous les autres types de données entre eux. C'est pourquoi un temps de convergence rapide est un grand avantage.
+
+L'un des problèmes avec RIP est qu'il a un temps de convergence lent.
+
+![image](https://user-images.githubusercontent.com/83721477/166432297-d7935aaa-dcf1-4799-8b6f-e61f6898fb96.png)
+
+Expliquons le schéma ci-dessus :
+
+Dans l'image ci-dessus, le réseau est dit "convergé", c'est-à-dire que tous les routeurs du réseau ont rempli leur table de routage et sont parfaitement au courant des réseaux qu'ils peuvent contacter. Puisque le réseau est maintenant convergé, les ordinateurs de n'importe lequel des réseaux ci-dessus peuvent entrer en contact les uns avec les autres.
+
+Encore une fois, en regardant l'une des tables de routage, vous remarquerez l'adresse réseau avec l'interface de sortie sur la droite et à côté se trouve le nombre de sauts vers ce réseau. N'oubliez pas que RIP ne comptera que jusqu'à 15 sauts, après quoi le paquet est rejeté (sur le saut 16).
+
+Chaque routeur diffusera l'intégralité de sa table de routage toutes les 30 secondes.
+
+Le routage basé sur le vecteur de distance peut causer beaucoup de problèmes lorsque les liaisons montent et descendent, cela peut entraîner des boucles infinies et peut également désynchroniser le réseau.
+
+Des boucles de routage peuvent se produire lorsque chaque routeur n'est pas mis à jour à peu près au même moment.
+
+Solutions:
+
+SPLIT HORIZON
+Fonctionne sur le principe qu'il n'est jamais utile de renvoyer des informations sur un routeur à la destination d'où provient le paquet d'origine. Donc si par exemple je t'ai raconté une blague, ça ne sert à rien que tu me répètes cette blague !
+
+Dans notre exemple, cela aurait empêché le routeur A d'envoyer les informations mises à jour qu'il a reçues du routeur B au routeur B.
+
+ROUTE POISONING
+Alternative à l'horizon partagé, lorsqu'un routeur reçoit des informations sur une route d'un réseau particulier, le routeur annonce la route vers ce réseau avec la métrique de 16, indiquant que la destination est inaccessible.
+
+Dans notre exemple, cela signifie que lorsque le réseau 5 tombe en panne, le routeur E initie l'empoisonnement du routeur en saisissant une entrée de table pour le réseau 5 sous la forme 16, ce qui signifie essentiellement qu'il est inaccessible. De cette façon, le routeur D n'est pas susceptible de recevoir des mises à jour incorrectes concernant la route vers le réseau 5. Lorsque le routeur D reçoit un empoisonnement du routeur du routeur E, il envoie une mise à jour appelée poison reverse au routeur E. Cela garantit que toutes les routes sur le segment a reçu les informations d'itinéraire empoisonné.
+
+L'empoisonnement de route, utilisé avec les hold-down (voir section ci-dessous) accélérera certainement le temps de convergence car les routeurs voisins n'ont pas à attendre 30 secondes avant d'annoncer la route empoisonnée.
 
 https://www.youtube.com/watch?v=40b1bM_y0Ng
 
