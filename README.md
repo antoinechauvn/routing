@@ -40,7 +40,8 @@ Ce tableau répertorie les différents protocoles de routage et la métrique qu'
 ### Distance administrative!
 La distance administrative est une condition de départage qui est utilisée lorsqu'il existe deux routes candidates ou plus de même longueur mais apprises via des protocoles de routage différents. Une seule version de ces routes vers le même réseau sera installée dans la table de routage.
 
-La distance administrative est une valeur numérique préconfigurée de la `fiabilité d'une source d'informations de routage`. Les protocoles les plus préférés ont des numéros de distance administrative plus petits.
+La distance administrative est une valeur numérique préconfigurée de la `fiabilité d'une source d'informations de routage`.<br>
+Les protocoles les plus préférés ont des numéros de distance administrative plus petits.
 
 #### Distances administratives par défaut
 ![image](https://user-images.githubusercontent.com/83721477/166452673-a0ae8900-a7ec-4dd0-a2f4-3b3e86f1d7e6.png)
