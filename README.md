@@ -3,7 +3,7 @@
 ## Définitions 
 `Convergence` : Le processus nécessaire à tous les routeurs d'un interréseau pour mettre à jour leurs tables de routage et créer une vue cohérente du réseau, en utilisant les meilleurs chemins possibles. Aucune donnée utilisateur n'est transmise pendant la convergence.
 
-`Route par défaut` : La route par défaut indiquera comment acheminer le trafic qui ne correspond à aucune entrée dans la table de routage. En l'absence de route par défaut, le routeur éliminera un paquet dont la destination n'est pas connue.
+`Route par défaut` : Lorsqu'il n'y a pas de route pour un réseau dans la table de routage, le traffic est acheminer via la route par défaut.En l'absence de route par défaut, le routeur éliminera un paquet dont la destination n'est pas connue.
 
 `Route statique` : une route permanente entrée manuellement dans une table de routage. Cette route restera dans le tableau, même si le lien tombe en panne. Il ne peut être effacé que manuellement.
 
