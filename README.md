@@ -24,7 +24,7 @@ En fonction du nombre de destinataires et de la manière de délivrer le message
 
 
 ## Protocoles de routage à état de lien
-Les protocoles de routage à état de lien utilisent un algorithme beaucoup plus efficace. Ici, les routeurs construisent leurs tables de routage, en fonction du coût des différentes liaisons !
+Les protocoles de routage à état de lien utilisent un algorithme efficace. Les routeurs construisent leurs tables de routage, en fonction du coût des différentes liaisons.
 OSPF et ISIS sont des protocoles de routage à état de lien. Ils ont l’avantage d’avoir une convergence très rapide.
 
 
