@@ -27,14 +27,48 @@ En fonction du nombre de destinataires et de la manière de délivrer le message
 Les protocoles de routage à état de lien utilisent un algorithme efficace. Les routeurs construisent leurs tables de routage, en fonction du coût des différentes liaisons.
 OSPF et ISIS sont des protocoles de routage à état de lien. Ils ont l’avantage d’avoir une convergence très rapide.
 
+### MEMO
+<hr>
+* Dispose d’une vue commune de la topologie.
+* Calcule le plus court chemin vers les autres routeurs.
+* Mises à jour déclenchées par événement et convergence plus rapide.
+* Passe les mises à jour du routage à état de liens aux autres routeurs.
+<hr>
+
+### Comment les informations de routage état de lien sont mises à jour ?
+Le routage à état de liens utilise les fonctions suivantes:
+* des mises à jour de routage à état de liens (LSA).
+* une base de données topologique.
+* l’algorithme du plus court chemin d’abord (SPF).
+* l’arbre SPF résultant.
+* une table de routage afin de déterminer les meilleurs chemins pour les paquets.
+
+https://www.youtube.com/watch?v=sDnIRhiolp8
+
+Exemple:<br>
+![image](https://user-images.githubusercontent.com/83721477/166420552-750dc45a-0760-414e-a6b4-366caafe90e7.png)
 
 ## Protocoles de routage à vecteur de distance
-Les protocoles de routage à vecteur de distances permettent de construire des tables de routages sans aucune vision globale du réseau.
-Le terme « vecteur » vient du faite, que le protocole manipule des tableaux vers les autres nœuds du réseau.
-Ce sont des équipements qui ont plusieurs cartes réseau, dont chacune est reliée à un réseau différent.
+**Routing by Rumor**
+```
+Les protocoles de routage à vecteur de distances permettent de construire des tables de routages sans aucune vision globale du
+réseau. Le terme « vecteur » vient du faite, que le protocole manipule des tableaux vers les autres nœuds du réseau.
+Et le mot « distance » est le nombre de sauts qui lui permet d’atteindre les autres routeurs. IGRP et RIP sont des
+protocoles de routage à vecteur de distance.
 
-Et le mot « distance » est le nombre de sauts qui lui permet d’atteindre les autres routeurs !
-IGRP et RIP sont des protocoles de routage à vecteur de distance.
+```
+https://www.youtube.com/watch?v=40b1bM_y0Ng<br>
+
+### MEMO
+<hr>
+* Visualise la topologie du réseau du point de vue de leurs voisins.
+* Ajoute des vecteurs de distance d’un routeur à l’autre.
+* Mises à jour périodiques fréquentes et convergence lente.
+* Passe des copies des tables de routage aux routeurs voisins.
+<hr>
+
+![image](https://user-images.githubusercontent.com/83721477/166420147-b68e6c67-2e51-4203-8b88-cd237bd951c0.png)
+
 
 ![image](https://user-images.githubusercontent.com/83721477/166242283-596a4756-9b32-42ec-b034-8a8838ef1cca.png)
 ![image](https://user-images.githubusercontent.com/83721477/166243346-d4a9c947-5cad-4922-a1d0-1d5a156be1f4.png)
