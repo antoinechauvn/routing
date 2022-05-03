@@ -52,15 +52,15 @@ Les protocoles à vecteur de distance visualisent les réseaux en termes de rout
 ce qui se trouve également être la métrique utilisée.<br>
 Le nombre de `sauts` (hop) (max de 15 pour RIP, 16 est considéré comme inaccessible et 255 pour IGMP), augmentera d'un à chaque fois que le paquet transite par un routeur.
 
-###Exemple:
+### Exemple:
 
 ![image](https://user-images.githubusercontent.com/83721477/166432197-98345227-5a67-4f00-92be-a11d84ae9927.png)
 
-* Les nombres que vous voyez sur le côté droit des interfaces sont les "nombres de sauts" qui, comme mentionné, est la métrique que les protocoles de vecteur de distance utilisent pour suivre à quelle distance se trouve un réseau.
+* Les nombres que vous voyez sur le côté droit des interfaces sont les `nombres de sauts` qui, comme mentionné, est la métrique que les protocoles de vecteur de distance utilisent pour suivre à quelle distance se trouve un réseau.
 * Puisque ces 2 réseaux sont connectés directement à l'interface du routeur, ils auront une valeur de 0 dans l'entrée de la table du routeur. La même règle s'applique à chaque routeur de notre exemple.
 * Rappelez-vous que nous avons "juste allumer les routeurs", donc le réseau converge maintenant et cela signifie qu'aucune donnée n'est transmise.
 * Quand je dis "pas de données", je veux dire les données de n'importe quel ordinateur ou serveur qui pourrait être sur l'un des réseaux.
-* Pendant ce temps de "convergence", le seul type de données transmis entre les routeurs est celui qui leur permet de remplir leurs tables de routage et après cela, les routeurs transmettront tous les autres types de données entre eux.
+* Pendant ce temps de `convergence`, le seul type de données transmis entre les routeurs est celui qui leur permet de remplir leurs tables de routage et après cela, les routeurs transmettront tous les autres types de données entre eux.
 C'est pourquoi un temps de convergence rapide est un grand avantage. <br>
 L'un des problèmes avec RIP est qu'il a un temps de convergence lent.
 
@@ -68,7 +68,7 @@ L'un des problèmes avec RIP est qu'il a un temps de convergence lent.
 
 Expliquons le schéma ci-dessus :
 
-Dans l'image ci-dessus, le réseau est dit "convergé", c'est-à-dire que tous les routeurs du réseau ont rempli leur table de routage et sont parfaitement au courant des réseaux qu'ils peuvent contacter. Puisque le réseau est maintenant convergé, les ordinateurs de n'importe lequel des réseaux ci-dessus peuvent entrer en contact les uns avec les autres.
+Dans l'image ci-dessus, le réseau est dit `convergé`, c'est-à-dire que tous les routeurs du réseau ont rempli leur table de routage et sont parfaitement au courant des réseaux qu'ils peuvent contacter. Puisque le réseau est maintenant convergé, les ordinateurs de n'importe lequel des réseaux ci-dessus peuvent entrer en contact les uns avec les autres.
 
 Encore une fois, en regardant l'une des tables de routage, vous remarquerez l'adresse réseau avec l'interface de sortie sur la droite et à côté se trouve le nombre de sauts vers ce réseau. N'oubliez pas que RIP ne comptera que jusqu'à 15 sauts, après quoi le paquet est rejeté (sur le saut 16).
 
