@@ -25,17 +25,14 @@ expéditeur jusqu'à un ou plusieurs destinataires
 ## Déterminer comment un routeur prend une décision de transfert
 ### Métrique
 
-```
-Les protocoles de routage dynamique calculent et utilisent une valeur numérique pour décrire le coût d'un chemin vers une destination.
-Ce nombre est appelé une `métrique` et il est spécifique à chaque protocole de routage.
-Les valeurs métriques de deux protocoles de routage différents ne sont pas comparées entre elles.
-Tous les protocoles de routage utilisent des propriétés différentes du chemin ou utilisent des calculs différents.
-Par exemple, certains protocoles utilisent une métrique simple comme le nombre de routeurs ou de sauts qu'un paquet doit traverser pour
-atteindre le réseau distant
+Les protocoles de routage dynamique calculent et utilisent une valeur numérique pour décrire le coût d'un chemin vers une destination.<br>
+Ce nombre est appelé une `métrique` et il est spécifique à chaque protocole de routage.<br>
+Les valeurs métriques de deux protocoles de routage différents ne sont pas comparées entre elles.<br>
+Tous les protocoles de routage utilisent des propriétés différentes du chemin ou utilisent des calculs différents.<br><br>
+Par exemple, certains protocoles utilisent une métrique simple comme le nombre de routeurs ou de sauts qu'un paquet doit traverser pour atteindre le réseau distant.<br>
 Certains autres protocoles peuvent utiliser la bande passante comme coût de chemin.
-```
 
-Ce tableau répertorie les différents protocoles de routage et la métrique qu'ils utilisent.
+#### Ce tableau répertorie les différents protocoles de routage et la métrique qu'ils utilisent.
 ![image](https://user-images.githubusercontent.com/83721477/166452273-d2f93ba5-9fca-412c-b45a-e1baaaa63b84.png)
 
 #### Sélection d'une route à l'aide de la métrique du protocole de routage
@@ -56,13 +53,7 @@ Les protocoles les plus préférés ont des numéros de distance administrative 
 
 ### Match le plus long
 
-Tous les protocoles de routage de monodiffusion recherchent des itinéraires à l'aide de l'adresse IP de destination d'un paquet.
-<br>
 La correspondance la plus longue fait référence au processus d'identification de la route vers le réseau le plus spécifique auquel le paquet correspond.
-<br>
-Par exemple, la route par défaut ou la route vers 0.0.0.0/0 correspond à chaque paquet.
-<br>
-Le saut suivant de ces routes est souvent appelé passerelle de dernier recours car il s'agit de la route la moins préférée, qui n'est utilisée que s'il n'existe aucune autre route correspondante.
 <br>
 **La route la plus spécifique est une route hôte avec une longueur de préfixe de 32 (ou un masque de sous-réseau de 255.255.255.255).**
 <br>
