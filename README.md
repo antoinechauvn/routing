@@ -40,7 +40,12 @@ Exemple:<br>
 ## Protocoles de routage à vecteur de distance
 **Routing by Rumor**
 ```
-Le routage à vecteur de distance est ainsi nommé car il implique deux facteurs : la distance , ou métrique, d'une destination, et le vecteur , ou direction à prendre pour s'y rendre. Les informations de routage ne sont échangées qu'entre voisins directement connectés. Cela signifie qu'un routeur sait de quel voisin une route a été apprise, mais il ne sait pas où ce voisin a appris la route ; un routeur ne peut pas voir au-delà de ses propres voisins. Cet aspect du routage à vecteur de distance est parfois appelé "routage par rumeur". Des mesures telles que l'horizon partagé et l'inversion du poison sont utilisées pour éviter les boucles de routage.
+Le routage à vecteur de distance est ainsi nommé car il implique deux facteurs : la distance , ou métrique, d'une destination,
+et le vecteur , ou direction à prendre pour s'y rendre. Les informations de routage ne sont échangées qu'entre voisins
+directement connectés. Cela signifie qu'un routeur sait de quel voisin une route a été apprise, mais il ne sait pas où ce voisin
+a appris la route ; un routeur ne peut pas voir au-delà de ses propres voisins. Cet aspect du routage à vecteur de distance est
+parfois appelé "routage par rumeur". Des mesures telles que l'horizon partagé et l'inversion du poison sont utilisées pour éviter
+les boucles de routage.
 
 ```
 
