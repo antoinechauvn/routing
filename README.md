@@ -5,7 +5,8 @@
 
 ## Qu'est-ce qu'un protocole de routage?
 ```
-Le protocole de routage est le mécanisme par lequel des chemins sont sélectionnés dans un réseau pour acheminer les données d'un expéditeur jusqu'à un ou plusieurs destinataires
+Le protocole de routage est le mécanisme par lequel des chemins sont sélectionnés dans un réseau pour acheminer les données d'un
+expéditeur jusqu'à un ou plusieurs destinataires
 ```
 
 En fonction du nombre de destinataires et de la manière de délivrer le message, on distingue :
