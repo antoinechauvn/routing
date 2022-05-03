@@ -34,9 +34,8 @@ Certains autres protocoles peuvent utiliser la bande passante comme coût de che
 Ce tableau répertorie les différents protocoles de routage et la métrique qu'ils utilisent.
 ![image](https://user-images.githubusercontent.com/83721477/166452273-d2f93ba5-9fca-412c-b45a-e1baaaa63b84.png)
 
+#### Sélection d'une route à l'aide de la métrique du protocole de routage
 ![image](https://user-images.githubusercontent.com/83721477/166449098-67e1cfbf-823a-45b8-a574-278d97d20c8d.png)
-
-Sélection d'une route à l'aide de la métrique du protocole de routage
 
 ### Distance administrative!
 ![image](https://user-images.githubusercontent.com/83721477/166449323-4d1985ff-a620-4144-a94e-08508f38c548.png)
