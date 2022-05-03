@@ -70,8 +70,8 @@ Les deux réseaux apparaîtront dans la table de routage.
 <br>
 Une telle situation existe souvent lorsqu'un récapitulatif est effectué dans le réseau, c'est-à-dire le processus de combinaison de plusieurs routes en une seule.
 
+#### Sélection du meilleur itinéraire en fonction de la correspondance la plus longue (donc la plus précise)
 ![image](https://user-images.githubusercontent.com/83721477/166452014-de5cca83-37fc-468d-9889-5d0172e43263.png)
-Sélection du meilleur itinéraire en fonction de la correspondance la plus longue
 
 
 ## Protocoles de routage à vecteur de distance
