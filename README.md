@@ -1,5 +1,14 @@
 # routing
 
+## Définitions 
+`Convergence` : Le processus nécessaire à tous les routeurs d'un interréseau pour mettre à jour leurs tables de routage et créer une vue cohérente du réseau, en utilisant les meilleurs chemins possibles. Aucune donnée utilisateur n'est transmise pendant la convergence.
+
+`Route par défaut` : une entrée de route "standard" dans une table de routage qui est utilisée comme première option. Tous les paquets envoyés par un appareil seront d'abord envoyés à la route par défaut. Si cela échoue, il essaiera des itinéraires alternatifs.
+
+`Route statique` : une route permanente entrée manuellement dans une table de routage. Cette route restera dans le tableau, même si le lien tombe en panne. Il ne peut être effacé que manuellement.
+
+`Route dynamique` : une entrée de route qui est mise à jour dynamiquement (automatiquement) à mesure que des modifications se produisent sur le réseau. Les routes dynamiques sont fondamentalement l'opposé des routes statiques.
+
 # Approfondissement des protocoles de routage
 ![image](https://user-images.githubusercontent.com/83721477/166429844-5d6a3a30-08e3-4b58-aa22-246f37937880.png)
 
