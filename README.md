@@ -42,7 +42,7 @@ Les protocoles de routage à vecteur de distance utilisent des diffusions fréqu
 de l'intégralité de leur table de routage toutes les 30 secondes. sur toutes leurs interfaces afin de communiquer avec leurs voisins.<br>
 Plus les tables de routage sont volumineuses, plus il y a de diffusions.<br>
 Cette méthodologie limite considérablement la taille du réseau sur lequel Distance Vector peut être utilisé.<br>
-Le routage à vecteur de distance est ainsi nommé car il implique deux facteurs : la distance et le vecteur (ou direction à prendre pour s'y rendre)<br>
+Le routage à vecteur de distance est ainsi nommé car il implique deux facteurs : la distance et le vecteur<br>
 Les informations de routage ne sont échangées qu'entre voisins directement connectés.<br>
 Cela signifie qu'un routeur sait de quel voisin une route a été apprise, mais il ne sait pas où ce voisin a appris la route<br>
 Un routeur ne peut pas voir au-delà de ses propres voisins.<br>
