@@ -56,11 +56,12 @@ Le nombre de `sauts` (hop) (max de 15 pour RIP, 16 est considéré comme inacces
 
 ![image](https://user-images.githubusercontent.com/83721477/166432197-98345227-5a67-4f00-92be-a11d84ae9927.png)
 
-* Les nombres que vous voyez sur le côté droit des interfaces sont les "nombres de sauts" qui, comme mentionné, est la métrique que les protocoles de vecteur de distance utilisent pour suivre à quelle distance un particulier réseau est.
+* Les nombres que vous voyez sur le côté droit des interfaces sont les "nombres de sauts" qui, comme mentionné, est la métrique que les protocoles de vecteur de distance utilisent pour suivre à quelle distance se trouve un réseau.
 * Puisque ces 2 réseaux sont connectés directement à l'interface du routeur, ils auront une valeur de 0 dans l'entrée de la table du routeur. La même règle s'applique à chaque routeur de notre exemple.
-
-Rappelez-vous que nous avons "juste allumer les routeurs", donc le réseau converge maintenant et cela signifie qu'aucune donnée n'est transmise. Quand je dis "pas de données", je veux dire les données de n'importe quel ordinateur ou serveur qui pourrait être sur l'un des réseaux. Pendant ce temps de "convergence", le seul type de données transmis entre les routeurs est celui qui leur permet de remplir leurs tables de routage et après cela, les routeurs transmettront tous les autres types de données entre eux. C'est pourquoi un temps de convergence rapide est un grand avantage.
-
+* Rappelez-vous que nous avons "juste allumer les routeurs", donc le réseau converge maintenant et cela signifie qu'aucune donnée n'est transmise.
+* Quand je dis "pas de données", je veux dire les données de n'importe quel ordinateur ou serveur qui pourrait être sur l'un des réseaux.
+* Pendant ce temps de "convergence", le seul type de données transmis entre les routeurs est celui qui leur permet de remplir leurs tables de routage et après cela, les routeurs transmettront tous les autres types de données entre eux.
+C'est pourquoi un temps de convergence rapide est un grand avantage. <br>
 L'un des problèmes avec RIP est qu'il a un temps de convergence lent.
 
 ![image](https://user-images.githubusercontent.com/83721477/166432297-d7935aaa-dcf1-4799-8b6f-e61f6898fb96.png)
