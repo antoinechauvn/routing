@@ -29,10 +29,12 @@ OSPF et ISIS sont des protocoles de routage à état de lien. Ils ont l’avanta
 
 ### MEMO
 <hr>
+
 * Dispose d’une vue commune de la topologie.
 * Calcule le plus court chemin vers les autres routeurs.
 * Mises à jour déclenchées par événement et convergence plus rapide.
 * Passe les mises à jour du routage à état de liens aux autres routeurs.
+
 <hr>
 
 ### Comment les informations de routage état de lien sont mises à jour ?
@@ -61,10 +63,12 @@ https://www.youtube.com/watch?v=40b1bM_y0Ng<br>
 
 ### MEMO
 <hr>
+
 * Visualise la topologie du réseau du point de vue de leurs voisins.
 * Ajoute des vecteurs de distance d’un routeur à l’autre.
 * Mises à jour périodiques fréquentes et convergence lente.
 * Passe des copies des tables de routage aux routeurs voisins.
+
 <hr>
 
 ![image](https://user-images.githubusercontent.com/83721477/166420147-b68e6c67-2e51-4203-8b88-cd237bd951c0.png)
