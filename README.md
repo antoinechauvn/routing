@@ -18,8 +18,8 @@ Les protocoles de passerelle intérieure ( IGP ) se trouvent dans les systèmes 
 
 ## Qu'est-ce qu'un protocole de routage?
 ```
-Le protocole de routage est le mécanisme par lequel des chemins sont sélectionnés dans un réseau pour acheminer les données d'un
-expéditeur jusqu'à un ou plusieurs destinataires
+Le protocole de routage est le mécanisme par lequel des chemins sont sélectionnés dans un réseau pour
+acheminer les données d'un expéditeur jusqu'à un ou plusieurs destinataires
 ```
 
 ## Déterminer comment un routeur prend une décision de transfert
@@ -71,10 +71,11 @@ Une telle situation existe souvent lorsqu'un récapitulatif est effectué dans l
 
 ## Protocoles de routage à vecteur de distance
 ```
-Les protocoles de routage à vecteur de distance utilisent des diffusions fréquentes (255.255.255.255 ou FF:FF:FF:FF)
-de l'intégralité de leur table de routage toutes les 30 secondes. sur toutes leurs interfaces afin de communiquer avec leurs voisins.
-Plus les tables de routage sont volumineuses, plus il y a de diffusions.
-Cette méthodologie limite considérablement la taille du réseau sur lequel Distance Vector peut être utilisé.
+Les protocoles de routage à vecteur de distance utilisent des diffusions fréquentes
+(255.255.255.255 ou FF:FF:FF:FF) de l'intégralité de leur table de routage toutes les 30 secondes.
+sur toutes leurs interfaces afin de communiquer avec leurs voisins. Plus les tables de routage
+sont volumineuses, plus il y a de diffusions. Cette méthodologie limite considérablement la taille
+du réseau sur lequel Distance Vector peut être utilisé.
 ```
 
 #### Le routage à vecteur de distance est ainsi nommé car il implique deux facteurs : la distance et le vecteur<br><br>
