@@ -170,3 +170,18 @@ https://www.youtube.com/watch?v=sDnIRhiolp8
 <hr>
 
 ![image](https://user-images.githubusercontent.com/83721477/166420147-b68e6c67-2e51-4203-8b88-cd237bd951c0.png)
+
+## Auto-summarization
+![image](https://user-images.githubusercontent.com/83721477/166980689-593d51c2-9f1a-4359-bd90-700c68c3881d.png)
+Si la fonction de récapitulation des routes est désactivée, le routeur R0 annoncera ces routes telles qu'elles sont. Le routeur R1 recevra ces routes annoncées sur son interface série et les ajoutera à sa table de routage.
+
+![image](https://user-images.githubusercontent.com/83721477/166980847-df5c159c-4d54-44b2-8c4e-8a2c21a9026e.png)
+
+
+Mais si l'`auto-summarization` est activée, au lieu d'annoncer quatre routes contiguës séparément, le routeur R0 annoncera une seule route résumée à partir de l'interface série. Le routeur R1 recevra également une seule route résumée et ajoutera cette route à sa table de routage.
+
+![image](https://user-images.githubusercontent.com/83721477/166980881-f97b2b47-ecfe-4c64-8d21-5f39546330e6.png)
+
+**Avantages**
+* Il réduit la taille des mises à jour de routage.
+* Cela réduit la taille de la table de routage
