@@ -123,7 +123,7 @@ courts chemins, avec lui-même comme racine, pour toutes les routes connues.
 * Les protocoles de routage d'état de liaison inonderont le réseau avec ce qu'on appelle des LSA ou des annonces d'état de liens.<br>
 * Les LSA sont propagés entre tous les routeurs sans être modifiés.
 * Tous les routeurs créeront ou rempliront individuellement leur base de données qui est la même base de données sur tous les routeurs d'une zone.
-* Les routeurs exécutent l'algorithme du chemin le plus court ou `SPF`.OSPF par exemple, est Open Shortest Path First ou en d'autres termes, c'est un standard ouvert qui exécute l'algorithme SPF.
+* Les routeurs exécutent l'algorithme du chemin le plus court ou `SPF`. OSPF par exemple, est Open Shortest Path First ou en d'autres termes, c'est un standard ouvert qui exécute l'algorithme SPF.
 
 ## Notion de Classfull et Classless
 * Les protocoles de routage `classful` n’envoient pas le masque de sous-réseau avec leurs mises à jour.<br>**Example: RIPv1, IGRP**
