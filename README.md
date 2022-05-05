@@ -131,7 +131,7 @@ L'empoisonnement de route, utilisé avec les hold-down (voir section ci-dessous)
 
 
 ### EIGRP
-Le protocole de routage dynamique propriétaire EIGRP est la solution préférée dans les infrastructures Cisco Systems. EIGRP est un protocole de routage dynamique intérieur hautement fonctionnel. Il converge très rapidement et il est multi-protocoles IPv4/IPv6. Il permet de contrôler finement la métrique de manière à influencer les entrées de la table de routage. EIGRP est alors capable de répartir la charge de trafic sur des liaisons à coûts inégaux.
+EIGRP est un protocole à vecteur de distance, mais utilise certaines fonctions d’un protocole à état de lien (nous verrons lesquelles). On dit de lui qu’il est hybride.
 
 https://www.youtube.com/watch?v=40b1bM_y0Ng
 
