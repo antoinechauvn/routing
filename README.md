@@ -117,20 +117,19 @@ Des boucles de routage peuvent se produire lorsque chaque routeur n'est pas mis 
 
 ### Solutions:
 
-## SPLIT HORIZON
+### SPLIT HORIZON
 Fonctionne sur le principe qu'il n'est jamais utile de renvoyer des informations sur un routeur à la destination d'où provient le paquet d'origine. Donc si par exemple je t'ai raconté une blague, ça ne sert à rien que tu me répètes cette blague !
 
 Dans notre exemple, cela aurait empêché le routeur A d'envoyer les informations mises à jour qu'il a reçues du routeur B au routeur B.
 
-## ROUTE POISONING
+### ROUTE POISONING
 Alternative à l'horizon partagé, lorsqu'un routeur reçoit des informations sur une route d'un réseau particulier, le routeur annonce la route vers ce réseau avec la métrique de 16, indiquant que la destination est inaccessible.
 
 Dans notre exemple, cela signifie que lorsque le réseau 5 tombe en panne, le routeur E initie l'empoisonnement du routeur en saisissant une entrée de table pour le réseau 5 sous la forme 16, ce qui signifie essentiellement qu'il est inaccessible. De cette façon, le routeur D n'est pas susceptible de recevoir des mises à jour incorrectes concernant la route vers le réseau 5. Lorsque le routeur D reçoit un empoisonnement du routeur du routeur E, il envoie une mise à jour appelée poison reverse au routeur E. Cela garantit que toutes les routes sur le segment a reçu les informations d'itinéraire empoisonné.
 
 L'empoisonnement de route, utilisé avec les hold-down (voir section ci-dessous) accélérera certainement le temps de convergence car les routeurs voisins n'ont pas à attendre 30 secondes avant d'annoncer la route empoisonnée.
 
-
-### EIGRP
+## EIGRP
 EIGRP est un protocole à vecteur de distance, mais utilise certaines fonctions d’un protocole à état de lien (nous verrons lesquelles). On dit de lui qu’il est hybride.
 
 #### Avatanges de l'EIGRP:
