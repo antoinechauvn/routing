@@ -133,7 +133,7 @@ courts chemins, avec lui-même comme racine, pour toutes les routes connues.
 ## EIGRP
 EIGRP est un protocole à vecteur de distance propriétaire Cisco, mais utilise certaines fonctions d’un protocole à état de lien (nous verrons lesquelles). On dit de lui qu’il est hybride.
 
-#### Avatanges de l'EIGRP:
+#### Avantages de l'EIGRP:
 * Convergence rapide, car il utilise l’algorithme DUAL. C’est moteur de calcul, qui permet à EIGRP de garantir des chemins sans boucle et même des itinéraires bis en cas de problème.<br>Et de plus, ces informations sont stockées dans sa propre table de routage.
 * Si l'itinéraire principal tombe en panne, alors ce sera, l’itinéraire bis qui sera ajouté immédiatement à sa table de routage.<br>Et si par exemple, il n’y a aucun itinéraire de secours, alors il demandera directement à ses voisins de lui indiquer une nouvelle route.
 * Équilibrage de charge, ce qui permet aux administrateurs de mieux répartir le trafic dans leurs réseaux.
