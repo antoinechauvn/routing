@@ -11,10 +11,6 @@
 
 # Approfondissement des protocoles de routage
 
-Les protocoles de passerelle extérieure ( EGP ) se trouvent entre les systèmes autonomes<br>
-Les protocoles de passerelle intérieure ( IGP ) se trouvent dans les systèmes autonomes
-![image](https://user-images.githubusercontent.com/83721477/166430025-8c92f085-9a8d-4abc-a9cf-872f8014b55e.png)
-
 ## Qu'est-ce qu'un protocole de routage?
 ```
 Le protocole de routage est le mécanisme par lequel des chemins sont sélectionnés dans un réseau pour
@@ -170,6 +166,10 @@ https://www.youtube.com/watch?v=sDnIRhiolp8
 
 ![image](https://user-images.githubusercontent.com/83721477/166420147-b68e6c67-2e51-4203-8b88-cd237bd951c0.png)
 ![image](https://user-images.githubusercontent.com/83721477/166429844-5d6a3a30-08e3-4b58-aa22-246f37937880.png)
+
+* Les protocoles de passerelle extérieure ( EGP ) se trouvent entre les systèmes autonomes<br>
+* Les protocoles de passerelle intérieure ( IGP ) se trouvent dans les systèmes autonomes
+![image](https://user-images.githubusercontent.com/83721477/166430025-8c92f085-9a8d-4abc-a9cf-872f8014b55e.png)
 
 ## Auto-summarization
 ![image](https://user-images.githubusercontent.com/83721477/166980689-593d51c2-9f1a-4359-bd90-700c68c3881d.png)
