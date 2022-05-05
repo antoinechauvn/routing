@@ -115,14 +115,14 @@ Des boucles de routage peuvent se produire lorsque chaque routeur n'est pas mis 
 ```
 Les protocoles de routage à état de liaison ont une plus grande visibilité du réseau et sont généralement plus
 puissants que les protocoles de routage à vecteur de distance. Un routeur exécutant des protocoles de routage
-d'état de liaison a une "base de données" et a ainsi une meilleure visibilité du réseau ou de la topologie.
+d'état de liaison a une "base de données" Link-State Database (LSDB)  et a ainsi une meilleure visibilité du réseau ou de la topologie.
 À partir de cette base de données commune, chaque routeur construit sa propre arborescence relative des plus
 courts chemins, avec lui-même comme racine, pour toutes les routes connues.
 ```
 
 * Les protocoles de routage d'état de liaison inonderont le réseau avec ce qu'on appelle des LSA ou des annonces d'état de liens.<br>
 * Les LSA sont propagés entre tous les routeurs sans être modifiés.
-* Tous les routeurs créeront ou rempliront individuellement leur base de données qui est la même base de données sur tous les routeurs d'une zone.
+* Tous les routeurs créeront ou rempliront individuellement leur base de données ou Link-State Database (LSDB) qui est la même base de données sur tous les routeurs d'une zone.
 * Les routeurs exécutent l'algorithme du chemin le plus court ou `SPF`. OSPF par exemple, est Open Shortest Path First ou en d'autres termes, c'est un standard ouvert qui exécute l'algorithme SPF.
 
 ## Notion de Classfull et Classless
