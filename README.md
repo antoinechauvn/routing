@@ -146,7 +146,7 @@ Ces mises à jour sont envoyées en multicast à l’aide de l’adresse 224.0.0
 https://www.youtube.com/watch?v=40b1bM_y0Ng
 
 
-### OSPF
+## OSPF
 OSPF est un protocole de routage sans classe , ce qui signifie que dans ses mises à jour, il inclut le sous-réseau de chaque route qu'il connaît, activant ainsi des masques de sous-réseau de longueur variable. Avec des masques de sous-réseau de longueur variable, un réseau IP peut être divisé en plusieurs sous-réseaux de différentes tailles. Cela offre aux administrateurs réseau une flexibilité de configuration réseau supplémentaire. Ces mises à jour sont multidiffusées à des adresses spécifiques (224.0.0.5 et 224.0.0.6).
 
 #### Voici une liste des paquets OSPF les plus fréquemment utilisés :
