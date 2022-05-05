@@ -126,7 +126,7 @@ arborescence relative des plus courts chemins, avec lui-même comme racine, pour
 ```
 
 
-## Protocole de routage Classfull et Classless
+## Notion de Classfull et Classless
 * Les protocoles de routage `classful` n’envoient pas le masque de sous-réseau avec leurs mises à jour.
 * Et les protocoles de routage `classless` envoient le masque de sous-réseau avec leurs mises à jour.
 
