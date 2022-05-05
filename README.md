@@ -23,7 +23,7 @@ acheminer les données d'un expéditeur jusqu'à un ou plusieurs destinataires
 ```
 
 ## Déterminer comment un routeur prend une décision de transfert
-### Métrique
+### 1. Métrique
 
 Les protocoles de routage dynamique calculent et utilisent une valeur numérique pour décrire le coût d'un chemin vers une destination.<br>
 Ce nombre est appelé une `métrique` et il est spécifique à chaque protocole de routage.<br>
@@ -38,7 +38,7 @@ Certains autres protocoles peuvent utiliser la bande passante comme coût de che
 #### Sélection d'une route à l'aide de la métrique du protocole de routage
 ![image](https://user-images.githubusercontent.com/83721477/166449098-67e1cfbf-823a-45b8-a574-278d97d20c8d.png)
 
-### Distance administrative
+### 2. Distance administrative
 La distance administrative est une condition de départage qui est utilisée lorsqu'il existe deux routes candidates ou plus de même longueur mais apprises via des protocoles de routage différents. Une seule version de ces routes vers le même réseau sera installée dans la table de routage.
 
 La distance administrative est une valeur numérique préconfigurée de la `fiabilité d'une source d'informations de routage`.<br>
@@ -51,7 +51,7 @@ Les protocoles les plus préférés ont des numéros de distance administrative 
 #### Sélection d'un itinéraire en fonction de la distance administrative
 ![image](https://user-images.githubusercontent.com/83721477/166976638-d7c6843f-2dda-4df4-a287-e4ccb01cc92e.png)
 
-### Match le plus long
+### 3. Match le plus long
 
 La correspondance la plus longue fait référence au processus d'identification de la route vers le réseau le plus spécifique auquel le paquet correspond.
 <br><br>
