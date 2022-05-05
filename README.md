@@ -130,7 +130,7 @@ Dans notre exemple, cela signifie que lorsque le réseau 5 tombe en panne, le ro
 L'empoisonnement de route, utilisé avec les hold-down (voir section ci-dessous) accélérera certainement le temps de convergence car les routeurs voisins n'ont pas à attendre 30 secondes avant d'annoncer la route empoisonnée.
 
 ## EIGRP
-EIGRP est un protocole à vecteur de distance, mais utilise certaines fonctions d’un protocole à état de lien (nous verrons lesquelles). On dit de lui qu’il est hybride.
+EIGRP est un protocole à vecteur de distance propriétaire Cisco, mais utilise certaines fonctions d’un protocole à état de lien (nous verrons lesquelles). On dit de lui qu’il est hybride.
 
 #### Avatanges de l'EIGRP:
 * Convergence rapide, car il utilise l’algorithme DUAL. C’est moteur de calcul, qui permet à EIGRP de garantir des chemins sans boucle et même des itinéraires bis en cas de problème.<br>Et de plus, ces informations sont stockées dans sa propre table de routage.
