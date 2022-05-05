@@ -171,8 +171,10 @@ https://www.youtube.com/watch?v=sDnIRhiolp8
 
 ![image](https://user-images.githubusercontent.com/83721477/166420147-b68e6c67-2e51-4203-8b88-cd237bd951c0.png)
 
+
 ## Auto-summarization
 ![image](https://user-images.githubusercontent.com/83721477/166980689-593d51c2-9f1a-4359-bd90-700c68c3881d.png)
+
 Si la fonction de récapitulation des routes est désactivée, le routeur R0 annoncera ces routes telles qu'elles sont. Le routeur R1 recevra ces routes annoncées sur son interface série et les ajoutera à sa table de routage.
 
 ![image](https://user-images.githubusercontent.com/83721477/166980847-df5c159c-4d54-44b2-8c4e-8a2c21a9026e.png)
