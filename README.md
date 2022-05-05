@@ -169,6 +169,7 @@ https://www.youtube.com/watch?v=sDnIRhiolp8
 
 * Les protocoles de passerelle extérieure ( EGP ) se trouvent entre les systèmes autonomes<br>
 * Les protocoles de passerelle intérieure ( IGP ) se trouvent dans les systèmes autonomes
+
 ![image](https://user-images.githubusercontent.com/83721477/166430025-8c92f085-9a8d-4abc-a9cf-872f8014b55e.png)
 
 ## Auto-summarization
