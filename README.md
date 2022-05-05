@@ -133,6 +133,15 @@ L'empoisonnement de route, utilisé avec les hold-down (voir section ci-dessous)
 ### EIGRP
 EIGRP est un protocole à vecteur de distance, mais utilise certaines fonctions d’un protocole à état de lien (nous verrons lesquelles). On dit de lui qu’il est hybride.
 
+#### Avatanges de l'EIGRP:
+* Convergence rapide, car il utilise l’algorithme DUAL. C’est moteur de calcul, qui permet à EIGRP de garantir des chemins sans boucle et même des itinéraires bis en cas de problème.<br>Et de plus, ces informations sont stockées dans sa propre table de routage.
+* Si l'itinéraire principal tombe en panne, alors ce sera, l’itinéraire bis qui sera ajouté immédiatement à sa table de routage.<br>Et si par exemple, il n’y a aucun itinéraire de secours, alors il demandera directement à ses voisins de lui indiquer une nouvelle route.
+* Équilibrage de charge, ce qui permet aux administrateurs de mieux répartir le trafic dans leurs réseaux.
+* Protocole de routage sans classe : c’est-à-dire qu’il annonce un masque de sous réseau pour chaque destination.<br>Ce qui lui permet de supporter les masques de sous réseau variable, plus connu sous le nom de VLSM.
+* Consomme très peu de bande passante, car il ne fait pas de mises à jour périodiques, et qu’il envoie uniquement la ou les routes qui ont été modifiées… contrairement à d’autres protocoles qui eux, envoient toutes leurs tables de routage, et ce, régulièrement.<br>De plus, EIGRP enverra ces modifications, uniquement aux routeurs qui sont concernés par ce changement. Ce qui réduit grandement la consommation de la bande passante. 
+Ces mises à jour sont envoyées en multicast à l’aide de l’adresse 224.0.0.10.
+
+
 https://www.youtube.com/watch?v=40b1bM_y0Ng
 
 ## Protocoles de routage à état de lien
