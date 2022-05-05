@@ -128,7 +128,7 @@ arborescence relative des plus courts chemins, avec lui-même comme racine, pour
 
 ## Notion de Classfull et Classless
 * Les protocoles de routage `classful` n’envoient pas le masque de sous-réseau avec leurs mises à jour.<br>**Example: RIPv1, IGRP**
-* Et les protocoles de routage `classless` envoient le masque de sous-réseau avec leurs mises à jour.**Example: RIPv2, EIGRP, OSPF, IS-IS et BGP**
+* Et les protocoles de routage `classless` envoient le masque de sous-réseau avec leurs mises à jour.<br>**Example: RIPv2, EIGRP, OSPF, IS-IS et BGP**
 *Note: Les protocoles de routage à état de liens sont classless*
 
 ## EIGRP
