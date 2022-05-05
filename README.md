@@ -129,6 +129,10 @@ Dans notre exemple, cela signifie que lorsque le réseau 5 tombe en panne, le ro
 
 L'empoisonnement de route, utilisé avec les hold-down (voir section ci-dessous) accélérera certainement le temps de convergence car les routeurs voisins n'ont pas à attendre 30 secondes avant d'annoncer la route empoisonnée.
 
+
+### EIGRP
+Le protocole de routage dynamique propriétaire EIGRP est la solution préférée dans les infrastructures Cisco Systems. EIGRP est un protocole de routage dynamique intérieur hautement fonctionnel. Il converge très rapidement et il est multi-protocoles IPv4/IPv6. Il permet de contrôler finement la métrique de manière à influencer les entrées de la table de routage. EIGRP est alors capable de répartir la charge de trafic sur des liaisons à coûts inégaux.
+
 https://www.youtube.com/watch?v=40b1bM_y0Ng
 
 ## Protocoles de routage à état de lien
