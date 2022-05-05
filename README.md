@@ -113,13 +113,17 @@ Des boucles de routage peuvent se produire lorsque chaque routeur n'est pas mis 
 
 ## Protocoles de routage à état de lien
 ```
-Le routage à état de liens, nécessite que tous les routeurs connaissent les chemins accessibles par tous les autres
-routeurs du réseau. Les informations d'état des liens sont inondées dans tout le domaine d'état des liens
-(une zone dans OSPF ou IS-IS) pour garantir que tous les routeurs possèdent une copie synchronisée de la base de
-données d'état des liens de la zone. À partir de cette base de données commune, chaque routeur construit sa propre
-arborescence relative des plus courts chemins, avec lui-même comme racine, pour toutes les routes connues.
+Les protocoles de routage à état de liaison ont une plus grande visibilité du réseau et sont généralement plus
+puissants que les protocoles de routage à vecteur de distance. Un routeur exécutant des protocoles de routage
+d'état de liaison a une "base de données" et a ainsi une meilleure visibilité du réseau ou de la topologie.
+À partir de cette base de données commune, chaque routeur construit sa propre arborescence relative des plus
+courts chemins, avec lui-même comme racine, pour toutes les routes connues.
 ```
 
+* Les protocoles de routage d'état de liaison inonderont le réseau avec ce qu'on appelle des LSA ou des annonces d'état de liens.<br>
+* Les LSA sont propagés entre tous les routeurs sans être modifiés.
+* Tous les routeurs créeront ou rempliront individuellement leur base de données qui est la même base de données sur tous les routeurs d'une zone.
+* Les routeurs exécutent l'algorithme du chemin le plus court ou `SPF`.OSPF par exemple, est Open Shortest Path First ou en d'autres termes, c'est un standard ouvert qui exécute l'algorithme SPF.
 
 ## Notion de Classfull et Classless
 * Les protocoles de routage `classful` n’envoient pas le masque de sous-réseau avec leurs mises à jour.<br>**Example: RIPv1, IGRP**
@@ -142,7 +146,7 @@ https://www.youtube.com/watch?v=40b1bM_y0Ng
 
 
 ## OSPF
-OSPF est un protocole de routage sans classe , ce qui signifie que dans ses mises à jour, il inclut le sous-réseau de chaque route qu'il connaît, activant ainsi des masques de sous-réseau de longueur variable. Avec des masques de sous-réseau de longueur variable, un réseau IP peut être divisé en plusieurs sous-réseaux de différentes tailles. Cela offre aux administrateurs réseau une flexibilité de configuration réseau supplémentaire. Ces mises à jour sont multidiffusées à des adresses spécifiques (224.0.0.5 et 224.0.0.6).
+
 
 #### Voici une liste des paquets OSPF les plus fréquemment utilisés :
 
