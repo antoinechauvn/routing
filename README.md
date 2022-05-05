@@ -115,19 +115,19 @@ Expliquons le schéma ci-dessus :
 * Le routage basé sur le vecteur de distance peut causer beaucoup de problèmes lorsque les liaisons montent et descendent, cela peut entraîner des boucles infinies et peut également désynchroniser le réseau.
 Des boucles de routage peuvent se produire lorsque chaque routeur n'est pas mis à jour à peu près au même moment.
 
-### Solutions:
+## Protocoles de routage à état de lien
+```
+Le routage à état de liens, nécessite que tous les routeurs connaissent les chemins accessibles par tous les autres
+routeurs du réseau. Les informations d'état des liens sont inondées dans tout le domaine d'état des liens
+(une zone dans OSPF ou IS-IS) pour garantir que tous les routeurs possèdent une copie synchronisée de la base de
+données d'état des liens de la zone. À partir de cette base de données commune, chaque routeur construit sa propre
+arborescence relative des plus courts chemins, avec lui-même comme racine, pour toutes les routes connues.
+```
 
-### SPLIT HORIZON
-Fonctionne sur le principe qu'il n'est jamais utile de renvoyer des informations sur un routeur à la destination d'où provient le paquet d'origine. Donc si par exemple je t'ai raconté une blague, ça ne sert à rien que tu me répètes cette blague !
 
-Dans notre exemple, cela aurait empêché le routeur A d'envoyer les informations mises à jour qu'il a reçues du routeur B au routeur B.
-
-### ROUTE POISONING
-Alternative à l'horizon partagé, lorsqu'un routeur reçoit des informations sur une route d'un réseau particulier, le routeur annonce la route vers ce réseau avec la métrique de 16, indiquant que la destination est inaccessible.
-
-Dans notre exemple, cela signifie que lorsque le réseau 5 tombe en panne, le routeur E initie l'empoisonnement du routeur en saisissant une entrée de table pour le réseau 5 sous la forme 16, ce qui signifie essentiellement qu'il est inaccessible. De cette façon, le routeur D n'est pas susceptible de recevoir des mises à jour incorrectes concernant la route vers le réseau 5. Lorsque le routeur D reçoit un empoisonnement du routeur du routeur E, il envoie une mise à jour appelée poison reverse au routeur E. Cela garantit que toutes les routes sur le segment a reçu les informations d'itinéraire empoisonné.
-
-L'empoisonnement de route, utilisé avec les hold-down (voir section ci-dessous) accélérera certainement le temps de convergence car les routeurs voisins n'ont pas à attendre 30 secondes avant d'annoncer la route empoisonnée.
+## Protocole de routage Classfull et Classless
+* Les protocoles de routage `classful` n’envoient pas le masque de sous-réseau avec leurs mises à jour.
+* Et les protocoles de routage `classless` envoient le masque de sous-réseau avec leurs mises à jour.
 
 ## EIGRP
 EIGRP est un protocole à vecteur de distance propriétaire Cisco, mais utilise certaines fonctions d’un protocole à état de lien (nous verrons lesquelles). On dit de lui qu’il est hybride.
@@ -143,14 +143,6 @@ Ces mises à jour sont envoyées en multicast à l’aide de l’adresse 224.0.0
 
 https://www.youtube.com/watch?v=40b1bM_y0Ng
 
-## Protocoles de routage à état de lien
-```
-Le routage à état de liens, nécessite que tous les routeurs connaissent les chemins accessibles par tous les autres
-routeurs du réseau. Les informations d'état des liens sont inondées dans tout le domaine d'état des liens
-(une zone dans OSPF ou IS-IS) pour garantir que tous les routeurs possèdent une copie synchronisée de la base de
-données d'état des liens de la zone. À partir de cette base de données commune, chaque routeur construit sa propre
-arborescence relative des plus courts chemins, avec lui-même comme racine, pour toutes les routes connues.
-```
 
 ### OSPF
 OSPF est un protocole de routage sans classe , ce qui signifie que dans ses mises à jour, il inclut le sous-réseau de chaque route qu'il connaît, activant ainsi des masques de sous-réseau de longueur variable. Avec des masques de sous-réseau de longueur variable, un réseau IP peut être divisé en plusieurs sous-réseaux de différentes tailles. Cela offre aux administrateurs réseau une flexibilité de configuration réseau supplémentaire. Ces mises à jour sont multidiffusées à des adresses spécifiques (224.0.0.5 et 224.0.0.6).
