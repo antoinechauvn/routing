@@ -126,7 +126,7 @@ courts chemins, avec lui-même comme racine, pour toutes les routes connues.
 * Les routeurs exécutent l'algorithme du chemin le plus court ou `SPF`. OSPF par exemple, est Open Shortest Path First ou en d'autres termes, c'est un standard ouvert qui exécute l'algorithme SPF.
 
 ## Notion de Classfull et Classless
-* Les protocoles de routage `classful` n’envoient pas le masque de sous-réseau avec leurs mises à jour.<br>**Example: RIPv1, IGRP**
+* Les protocoles de routage `classfull` n’envoient pas le masque de sous-réseau avec leurs mises à jour.<br>**Example: RIPv1, IGRP**
 * Et les protocoles de routage `classless` envoient le masque de sous-réseau avec leurs mises à jour.<br>**Example: RIPv2, EIGRP, OSPF, IS-IS et BGP**<br>
 *Note: Les protocoles de routage à état de liens sont classless*
 
